@@ -1,0 +1,36 @@
+﻿@model ExamePratico.Models.TipoEvento
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TipoEvento</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Designação)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Designação)
+            @Html.ValidationMessageFor(model => model.Designação)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

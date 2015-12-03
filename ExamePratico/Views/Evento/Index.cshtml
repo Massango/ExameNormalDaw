@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ExamePratico.Models.Evento>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TituloEvento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrição)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Local)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Agenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDeEvento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataEvento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Participante)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TituloEvento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrição)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Local)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Agenda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeEvento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataEvento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Activo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Participante)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EventoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EventoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EventoID })
+        </td>
+    </tr>
+}
+
+</table>

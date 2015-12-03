@@ -1,0 +1,75 @@
+﻿@model ExamePratico.Models.Evento
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Evento</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TituloEvento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TituloEvento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descrição)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descrição)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Local)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Local)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Agenda)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Agenda)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoDeEvento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoDeEvento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataEvento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataEvento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Activo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Activo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Participante)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Participante)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

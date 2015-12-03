@@ -1,0 +1,44 @@
+﻿@model ExamePratico.Models.Inscricao
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Inscricao</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Participante)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Participante)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Evento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Evento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataInscricao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataInscricao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EstadoDoEvento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EstadoDoEvento)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.InscricaoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

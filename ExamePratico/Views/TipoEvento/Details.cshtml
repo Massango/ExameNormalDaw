@@ -1,0 +1,23 @@
+﻿@model ExamePratico.Models.TipoEvento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>TipoEvento</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Designação)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Designação)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TipoEventoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

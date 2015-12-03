@@ -1,0 +1,72 @@
+﻿@model ExamePratico.Models.Evento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Evento</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TituloEvento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TituloEvento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descrição)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descrição)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Local)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Local)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Agenda)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Agenda)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoDeEvento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoDeEvento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataEvento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataEvento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Activo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Activo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Participante)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Participante)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EventoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
